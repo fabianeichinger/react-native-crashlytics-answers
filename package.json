@@ -1,0 +1,29 @@
+{
+  "name": "react-native-crashlytics-answers",
+  "version": "0.0.1",
+  "description": "Event logging with Fabric's (Crashlytics) Answers for React Native",
+  "scripts": {
+    "test": "echo 'Error: no tests, sorry!' && exit -1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/feichngr/react-native-crashlytics-answers.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "ios",
+    "android",
+    "fabric",
+    "crashlytics",
+    "answers"
+  ],
+  "author": "Fabian Eichinger",
+  "license": "MIT",
+  "devDependencies": {
+    "react-native": "^0.17.0"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.17.0 <1.0.0"
+  }
+}
