@@ -51,11 +51,14 @@ public class AnswersModule extends BaseJavaModule {
   @ReactMethod
   public void logCustom(String eventName, ReadableMap customAttributes) {
     final CustomEvent event = new CustomEvent(eventName);
-    final ReadableMapKeySetIterator readableMapKeySetIterator = customAttributes.keySetIterator();
 
-    while (readableMapKeySetIterator.hasNextKey()) {
-      final String key = readableMapKeySetIterator.nextKey();
-      addCustomAttribute(event, customAttributes, key);
+    if (customAttributes != null) {
+      final ReadableMapKeySetIterator readableMapKeySetIterator = customAttributes.keySetIterator();
+
+      while (readableMapKeySetIterator.hasNextKey()) {
+        final String key = readableMapKeySetIterator.nextKey();
+        addCustomAttribute(event, customAttributes, key);
+      }
     }
 
     answers.logCustom(event);
